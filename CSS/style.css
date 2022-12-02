@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --cor-principal: #FF1F00;
+    --cor-secundaria: #FFFFFF;
+    --fonte: 'Poppins', sans-serif;
+}
+
+body {
+    background: #8f1010;
+    font-family: var(--fonte);
+}
+
+.cabecalho {
+    width: 100vw;
+    height: 10vh;
+    grid-area: cabecalho;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cabecalho p {
+    font-size: 2em;
+    color: var(--cor-secundaria);
+}
+
+.busca {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "titulo-pesquisa"
+        "barra-pesquisa"
+    ;
+    width: 100vw;
+    margin-top: 7vh;
+}
+
+.titulo__busca {
+    color: var(--cor-secundaria);
+    grid-area: titulo-pesquisa;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pesquisaPokemon {
+    grid-area: barra-pesquisa;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;
+}
+
+.barra__busca {
+    width: 30vw;
+    height: 8vh;
+    border-radius: 2em;
+    padding: 0 2em 0 2em;
+    text-align: center;
+}
+
+.botao__busca {
+    cursor: pointer;
+}
+
+.botao__busca:after {
+    font-family: FontAwesome;
+    font-size: 1em;
+    content: "\f002";
+    margin-left: -6vh;
+}
+
+.resultado {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "nome-pokemon"
+        "imagem-pokemon"
+    ;
+    margin: 10vh auto 0 auto;
+    width: 33vw;
+    height: 60vh;
+    align-items: center;
+    justify-content: center;
+    border: 1vh solid var(--cor-secundaria);
+    border-radius: 2em;
+}
+
+.pokeName {
+    grid-area: nome-pokemon;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    height: 8vh;
+    margin: 0 auto 0 auto;
+    background: var(--cor-secundaria);
+    border-radius: 2em;
+    font-weight: 400;
+}
+
+.pokeImagem {
+    grid-area: imagem-pokemon;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    height: 20vw;
+    margin: 0 auto 0 auto;
+    background: var(--cor-secundaria);
+    border-radius: 2em;
+}
